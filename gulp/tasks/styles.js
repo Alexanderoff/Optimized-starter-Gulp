@@ -40,9 +40,9 @@ const styles = () => {
     .pipe(sass())
     .pipe(gulpif(config.isProd, mediaGroup()))
     .pipe(gulpif(config.isDev, postcss(postcssDev), postcss(postcssProd)))
-    .pipe(gulpif(config.isDev, sourcemaps.write('.')))
-    .pipe(size(sizeConfig))
     .pipe(gulpif(config.isProd, rename({ suffix: '.min' })))
+    .pipe(size(sizeConfig))
+    .pipe(gulpif(config.isDev, sourcemaps.write('.')))
     .pipe(gulp.dest(`${config.styles.dist}`));
 };
 
