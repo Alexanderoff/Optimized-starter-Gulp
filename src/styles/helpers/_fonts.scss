@@ -1,5 +1,24 @@
 @import 'mixins/font-face';
+/*
+  Readme: https://github.com/Dan503/font-face-generator#readme
 
-// Example:
-// @include font-face(fileName, dirName, font-family, font-weight)
-// @include font-face(Roboto, Roboto-Light, 'Roboto Light', 300)
+  Example:
+
+@include font-face((
+  'Open Sans' : (
+    300 : 'open-sans-light',
+    400 : (
+      normal : 'open-sans-normal',
+      italic : 'open-sans-normal-italic'
+    ),
+    600 : 'open-sans-semibold',
+    700 : 'open-sans-bold'
+  )
+)); 
+*/
+
+// Globally set the generator to use ('woff2' 'woff') by default
+$font-file-types: 'woff2' 'woff';
+
+// Set a global default path
+$fonts-path: '../assets/fonts/';
