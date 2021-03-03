@@ -1,20 +1,17 @@
 import gulp from 'gulp';
+import config from './gulp/config';
+import clean from './gulp/tasks/clean';
 import html from './gulp/tasks/html';
 import styles from './gulp/tasks/styles';
 import scripts from './gulp/tasks/scripts';
 import images from './gulp/tasks/images';
-import conv2webp from './gulp/tasks/webp';
-import sprites from './gulp/tasks/sprites';
-import {woff, woff2} from './gulp/tasks/fonts';
-import watcher from './gulp/tasks/watcher';
-import clean from './gulp/tasks/clean';
-import config from './gulp/config';
+import fonts from './gulp/tasks/fonts';
+import server from './gulp/tasks/server';
 
 config.setEnv();
 
-export const build = gulp.series(
-  clean,
-  gulp.parallel(html, styles, scripts, images, conv2webp, sprites, woff, woff2)
-);
+exports.build = gulp.series(clean, html, styles, scripts, images, fonts);
 
-export const dev = gulp.series(build, watcher);
+exports.server = gulp.series(server);
+
+exports.default = gulp.series(exports.build, server);

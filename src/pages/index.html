@@ -1,7 +1,18 @@
-@@include('./modules/head.html', {
-  "lang": "en",
-  "title": "Index page"
-})
-@@include('./modules/header.html')
-<h2>Index</h2>
-@@include('./modules/footer.html')
+<!DOCTYPE html>
+<html lang="ru">
+  <!-- prettier-ignore -->
+  @@include('./partials/_head.html',{ 
+    'title': 'Optimized Gulp starter',
+    'description': 'Optmized Gulp starter by Alexanderoff',
+    'keywords': 'gulp, scss, html, images, webp, css, js',
+    'favicon': ''
+  })
+
+  <body>
+    @@include('./partials/_header.html')
+    <main class="main"></main>
+    <!-- prettier-ignore -->
+    @@include('./partials/_footer.html')
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "extends": ["airbnb-base", "prettier", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "linebreak-style": "off",
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "devDependencies": ["gulpfile.babel.js", "gulp/**/*", "webpack.config.js"]
+      }
+    ]
+  }
+}

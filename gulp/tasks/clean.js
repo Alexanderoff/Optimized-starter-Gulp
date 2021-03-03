@@ -1,7 +1,7 @@
 import del from 'del';
 
 const clean = () => {
-  return del('./build')
+  return del('./build');
 };
 
-export default clean;
+module.exports = clean;
