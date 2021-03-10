@@ -30,4 +30,4 @@ const server = () => {
   gulp.watch(`${config.fonts.src}/**/*.`, gulp.series(fonts, reload));
 };
 
-module.exports = server;
+export default server;

@@ -6,12 +6,12 @@ import styles from './gulp/tasks/styles';
 import scripts from './gulp/tasks/scripts';
 import images from './gulp/tasks/images';
 import fonts from './gulp/tasks/fonts';
-import server from './gulp/tasks/server';
+import serve from './gulp/tasks/server';
 
 config.setEnv();
 
-exports.build = gulp.series(clean, html, styles, scripts, images, fonts);
+export const build = gulp.series(clean, html, styles, scripts, images, fonts);
 
-exports.server = gulp.series(server);
+export const server = gulp.series(serve);
 
-exports.default = gulp.series(exports.build, server);
+export default gulp.series(build, server);

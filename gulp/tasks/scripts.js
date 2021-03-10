@@ -14,4 +14,4 @@ const scripts = () => {
     .pipe(gulp.dest(config.scripts.dist));
 };
 
-module.exports = scripts;
+export default scripts;

@@ -4,4 +4,4 @@ const clean = () => {
   return del('./build');
 };
 
-module.exports = clean;
+export default clean;

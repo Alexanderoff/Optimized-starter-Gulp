@@ -27,4 +27,4 @@ const fonts = () => {
     .pipe(gulp.dest(config.fonts.dist));
 };
 
-module.exports = fonts;
+export default fonts;

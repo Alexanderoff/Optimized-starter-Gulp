@@ -61,4 +61,4 @@ const img2webp = () => {
     .pipe(gulp.dest(config.images.dist));
 };
 
-module.exports = gulp.parallel(imgMin, img2webp);
+export default gulp.parallel(imgMin, img2webp);
